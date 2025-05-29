@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste com imagem</title>
+    <style>
+        .geralimg {
+            width: 150px;
+            height: auto;
+            display: block; /*Para transformar em bloco*/
+            margin: 0 auto; /*Para centralizar a imagem*/
+        }
+        body {
+            background-image: url('img/Imagens.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: rgb(0, 0, 12);
+        }
+        p {
+            font-family: Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            margin-top: 0px;
+        }   
+        h1 {
+            color: rgb(243, 234, 208);
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--style="width: 150px; height: auto;">-->
+    <p>Testando carga de imagem</p>
+    <p>Abaixo você vai ver uma imagem que está na mesma pasta</p>
+    <br>
+    <img src="Logo Constantino ffffff.png" alt="Logo branca" class="geralimg">
+    <br>
+    <p>Podemos também carregar imagens que estão em subpastas</p> <br>
+<img src="Imagens/invest1.jpg" alt="Imagem investimento" style="width: 150px; height: auto;" class="geralimg">
+<br>
+<p>Também podemos carregar imagens externas</p> <br>
+<!--URL-->
+<img src="https://cdn.pixabay.com/photo/2024/06/01/14/00/ai-8802304_1280.jpg" alt="Imagem rb" class="geralimg"> <br>
+<!--URL-->
+<p>Podemos também carregar imagens de fundo</p>
+    <h1>Teste de imagem com CSS</h1>
+    <p>Imagem de fundo com CSS</p>
+
+</body>
+</html>

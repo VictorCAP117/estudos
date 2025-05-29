@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<style>
+    .campo {
+        display: flex;
+        align-items: center;
+    }
+    .input {
+    background-color: rgb( 100, 100, 100);
+    margin-right: auto;
+    margin-left: auto;
+    }
+    .div1 {
+        background-color: rgb( 25, 25, 25);
+        border-radius: 16px;
+        padding: 15px 15px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 200px;
+        width: 300px;
+        box-shadow: 0px 0px 5px #ffffff;
+    }
+    body {
+        background-color: rgb( 0, 0, 0);
+        font-family: poppins, sans-serif;
+        color: rgb( 255, 255, 255);
+        text-align: center;
+    }
+</style>
+<body>
+            <h1>Cadastro de Aluno</h1>
+        <div class="div1">
+            <form action="cadastro.php" method="post">
+                
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required class="input"><br><br>
+                </div>
+                  <div>
+                    <label for="RA">RA:</label>
+                    <input type="text" id="nome" name="nome" required class="input"><br><br>
+                  </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required class="input"><br><br>
+                </div>
+                <div>
+                    <label for="telefone">Curso:</label>
+                    <input type="tel" id="telefone" name="telefone" required class="input"><br><br>
+                </div>
+
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+</body>
+</html>

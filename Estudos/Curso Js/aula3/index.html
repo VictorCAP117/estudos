@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<style> /* Comentário em CSS */
+    .img {
+        width: 300px;
+        height: auto;
+    }
+    body {
+        background-color: rgb(0, 0, 0);
+        font-family: poppins, sans-serif;
+        color: white;
+        text-align: center;
+    }
+</style>
+<body> <!--Comentário em HTML-->
+    <h1>Olá, mundo</h1>
+    <p>Já me livrei da maldição</p>
+    <img src="WhatsApp Image 2025-05-15 at 22.35.19.jpeg" alt="Duolingo" class="img">
+    <p>Essa é uma imagem do Duolingo</p>
+    <script>
+        let n1 = window.prompt('Digite um número!');
+        let n2 = window.prompt('Digite outro número!');
+        let n3 = (Number(n1) + Number(n2)); /*window.alert retorna string, é necessário converter para Number*/
+        window.alert(`A soma de ${n1} + ${n2} = ${n3}`);
+        // window.alert(n1 + ' + ' + n2 + ' = ' + n3);
+        // Number + Number = soma
+        // String + String = concatenação
+    </script>
+</body>
+</html>
