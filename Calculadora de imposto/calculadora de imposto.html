@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<style>
+    body {
+        background-color: rgb( 35, 35, 35);
+        font-family: poppins, sans-serif;
+        color: rgb( 255, 255, 255);
+    }
+</style>
+<body>
+    <h1>
+        Calculadora de Imposto
+    </h1>
+  <script>
+var sal = parseFloat(window.prompt("Digite seu salário:"));
+if (sal < 2428.81) {
+    window.alert("Insento de Imposto de Renda");
+}
+if (sal >= 2428.81 && sal <= 2826.65) {
+    window.alert("Imposto de Renda: R$" + (sal * 0.075).toFixed(2) + " (7,5%)");
+}
+if (sal >= 2826.66 && sal <= 3751.05) {
+    window.alert("Imposto de Renda: R$" + (sal * 0.15).toFixed(2) + " (15%)");
+}
+if (sal >= 3751.06 && sal <=4664.68) {
+    window.alert("Imposto de Renda: R$" + (sal * 0.225).toFixed(2) + " (22,5%)");
+}
+if (sal > 4664.68) {
+    window.alert("Imposto de Renda: R$" + (sal * 0.275).toFixed(2) + " (27,5%)");
+}
+</script>
+</body>
+</html>
