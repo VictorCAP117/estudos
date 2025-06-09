@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElement</title>
+</head>
+<style>
+    .container {
+        background-color:rgb(8, 39, 53);
+        padding: 20px;
+        width: 400px;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+</style>
+<body>
+    <div class="container">
+        <label for="Nome">Digite seu nome:</label>
+        <input type="text" id="Nome" name="Nome">
+        <button id="btn">Enviar</button>
+    </div>
+        <script>
+            document.getElementById("btn").addEventListener("click", function() {
+                const nome = document.getElementById("Nome").value;
+                if (nome) {
+                    alert("Olá, " + nome + "!");
+                } else {
+                    alert("Por favor, digite seu nome.");
+                }
+            });
+        </script>
+</body>
+</html>
