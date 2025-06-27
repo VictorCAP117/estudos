@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+</head>
+<style>
+    body {
+        background-color: rgb( 0, 0, 0);
+        color: white;
+    }
+    .div2 {
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: poppins, sans-serif;
+        font-size: 12px;
+    }
+    .div1 {
+        background-color: rgb(14, 131, 14);
+        padding: 20px;
+        border-radius: 10px;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 100px;
+        font-family: poppins, sans-serif;
+    }
+    input[type="number"] {
+        width: 120px;
+        background-color: rgb(255, 255, 255);
+    }
+        </style>
+<body>
+    <div class="div1">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Digite um número de 0 a 100</p>
+        <input type="number" id="number" min="0" max="100">
+        <button onclick="verificar()">Chutar</button>
+        <p id="resultado"></p>
+    </div>
+    <div class="div2">
+        versão 0.1.2
+    </div>
+<script>
+    const secretNumber = Math.floor(Math.random() * 101);
+    const resultado = document.getElementById("resultado");
+    let tentativas = 0;
+
+    function verificar() {
+        tentativas++;
+        let chute = Number (document.getElementById("number").value);
+        let input = document.getElementById("number");
+        
+        if (chute === secretNumber) {
+            resultado.innerHTML = "Parabéns você acertou com " + tentativas + " tentativas!";
+        } else if (chute < secretNumber) {
+            resultado.innerHTML = "O número é maior que " + chute + ". Tente novamente!";
+        } else {
+            resultado.innerHTML = "O número é menor que " + chute + ". Tente novamente!"; 
+        }
+        input.value = ""; // Limpa o campo de entrada após cada tentativa
+    }
+</script>
+<!--0.1.0 - primeira versão-->
+<!--0.1.1 - agora aparecem o número de tentativas ao acertar-->
+<!--0.1.2 - agora o campo de entrada é limpo após cada tentativa-->
+
+</body>
+</html>
