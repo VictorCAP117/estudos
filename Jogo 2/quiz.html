@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<style>
+    .div1 {
+        background-color: rgb(53, 3, 110);
+        width: 600px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    button {
+        background-color:rgb(15, 133, 41);
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+    }
+    body {
+        background-color: rgb( 0, 0, 0);
+        color: rgb( 255, 255, 255);
+        font-family: poppins, sans-serif;
+    }
+</style>
+<body>
+    <div class="div1">
+        <h1>Jogo de perguntas e respostas</h1>
+        <p>Quanto é 1 + 1?</p>
+        <form id="quiz">                                                                 <!-- Formulário para o quiz-->
+            <input type="radio" name="resposta" value="1"> 1 <br>
+            <input type="radio" name="resposta" value="2"> 2 <br>
+            <input type="radio" name="resposta" value="3"> 3 <br>
+            <input type="radio" name="resposta" value="4"> 4 <br>
+            <button type="submit">Enviar</button>                                     
+        </form>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        const form = document.getElementById('quiz');                                   // pegar o formulário
+        form.addEventListener('submit', function(event) {                               // adicionar um evento de envio ao formulário
+            event.preventDefault();                                                     // impedir o envio do formulário
+            const resposta = document.querySelector('input[name="resposta"]:checked');  // pegar a resposta selecionada
+            if (resposta) {                                                             // verificar se uma resposta foi selecionada
+                const valor = Number (resposta.value);                                  // converter o valor da resposta para número
+                if (valor === 2) { 
+            resultado.textContent = 'resposta correta!';
+                  } else {
+                    resultado.textContent = 'resposta errada!';
+                  }  }
+            }
+        )
+    </script>
+</body>
+</html>
